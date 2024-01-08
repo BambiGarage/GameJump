@@ -5,6 +5,10 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+<<<<<<< HEAD
+=======
+import com.example.luckyball.jumperpack.Settings.Settings
+>>>>>>> 2c5532b (Initial commit)
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -14,8 +18,14 @@ class JumpFirstViewModel : ViewModel() {
 
     init {
 
+<<<<<<< HEAD
         myStates.value.alpha5 = 0f
         upDate()
+=======
+
+        myStates.value.alpha5 = 0f
+        wwoooooorksses()
+>>>>>>> 2c5532b (Initial commit)
 
     }
 
@@ -32,7 +42,11 @@ class JumpFirstViewModel : ViewModel() {
                     targetPlatformIndex = currentIndex - 1
                 )
 
+<<<<<<< HEAD
                 upDate()
+=======
+                wwoooooorksses()
+>>>>>>> 2c5532b (Initial commit)
                 delay(200)
 
                 val isOnPlatform =
@@ -55,16 +69,28 @@ class JumpFirstViewModel : ViewModel() {
                     )
                 }
 
+<<<<<<< HEAD
                 upDate()
+=======
+                wwoooooorksses()
+>>>>>>> 2c5532b (Initial commit)
             } else {
                 if (check0() && check1() && check2() && check3() && check4() && check5()) {
                     myStates.value.pousePressed = true
                     myStates.value.gameOver = true
+<<<<<<< HEAD
                     upDate()
                 } else {
                     myStates.value.targetPlatformIndex = 5
                     myStates.value.ballPositionY = myStates.value.offsetsHeight.last()
                     upDate()
+=======
+                    wwoooooorksses()
+                } else {
+                    myStates.value.targetPlatformIndex = 5
+                    myStates.value.ballPositionY = myStates.value.offsetsHeight.last()
+                    wwoooooorksses()
+>>>>>>> 2c5532b (Initial commit)
                 }
 
             }
@@ -116,10 +142,27 @@ class JumpFirstViewModel : ViewModel() {
                 myStates.value = myStates.value.copy(offsetsWidth = newOffsetsWidth.toMutableList())
 
 
+<<<<<<< HEAD
                 upDate()
 
 
                 delay(10)
+=======
+                wwoooooorksses()
+
+
+                delay(
+                    if (Settings.whatIs == "EASY") {
+                        10
+                    } else {
+                        if (Settings.whatIs == "MEDIUM") {
+                            8
+                        } else {
+                            6
+                        }
+                    }
+                )
+>>>>>>> 2c5532b (Initial commit)
             }
         }
     }
@@ -132,16 +175,27 @@ class JumpFirstViewModel : ViewModel() {
 
                 myStates.value.alpha4.indexOfFirst { it == 1f }.takeIf { it != -1 }?.let {
                     myStates.value.alpha4[it] = 0f
+<<<<<<< HEAD
                     upDate()
                 }
                 myStates.value.bank += 500
                 upDate()
+=======
+                    wwoooooorksses()
+                }
+                myStates.value.bank += 500
+                wwoooooorksses()
+>>>>>>> 2c5532b (Initial commit)
             }
 
             3 -> {
                 myStates.value.alpha3 = 0f
                 myStates.value.bank += 500
+<<<<<<< HEAD
                 upDate()
+=======
+                wwoooooorksses()
+>>>>>>> 2c5532b (Initial commit)
             }
 
             2 -> {
@@ -149,18 +203,30 @@ class JumpFirstViewModel : ViewModel() {
                     myStates.value.alpha2[0] = 0f
                     myStates.value.bank += 500
 
+<<<<<<< HEAD
                     upDate()
+=======
+                    wwoooooorksses()
+>>>>>>> 2c5532b (Initial commit)
                 } else {
                     if (myStates.value.alpha2[1] == 1f) {
                         myStates.value.alpha2[1] = 0f
                         myStates.value.bank += 500
 
+<<<<<<< HEAD
                         upDate()
+=======
+                        wwoooooorksses()
+>>>>>>> 2c5532b (Initial commit)
                     } else {
                         myStates.value.alpha2[2] = 0f
                         myStates.value.bank += 500
 
+<<<<<<< HEAD
                         upDate()
+=======
+                        wwoooooorksses()
+>>>>>>> 2c5532b (Initial commit)
                     }
                 }
 
@@ -170,7 +236,11 @@ class JumpFirstViewModel : ViewModel() {
                 myStates.value.alpha1 = 0f
                 myStates.value.bank += 500
 
+<<<<<<< HEAD
                 upDate()
+=======
+                wwoooooorksses()
+>>>>>>> 2c5532b (Initial commit)
             }
 
             0 -> {
@@ -178,18 +248,30 @@ class JumpFirstViewModel : ViewModel() {
                     myStates.value.alpha0[0] = 0f
                     myStates.value.bank += 500
 
+<<<<<<< HEAD
                     upDate()
+=======
+                    wwoooooorksses()
+>>>>>>> 2c5532b (Initial commit)
                 } else {
                     if (myStates.value.alpha0[1] == 1f) {
                         myStates.value.alpha0[1] = 0f
                         myStates.value.bank += 500
 
+<<<<<<< HEAD
                         upDate()
+=======
+                        wwoooooorksses()
+>>>>>>> 2c5532b (Initial commit)
                     } else {
                         myStates.value.alpha0[2] = 0f
                         myStates.value.bank += 500
 
+<<<<<<< HEAD
                         upDate()
+=======
+                        wwoooooorksses()
+>>>>>>> 2c5532b (Initial commit)
                     }
                 }
             }
@@ -200,7 +282,11 @@ class JumpFirstViewModel : ViewModel() {
     }
 
 
+<<<<<<< HEAD
     fun upDate() {
+=======
+    fun wwoooooorksses() {
+>>>>>>> 2c5532b (Initial commit)
 
         val copy = myStates.value.copy()
         copy.worring = copy.worring + 44.1
@@ -214,8 +300,13 @@ class JumpFirstViewModel : ViewModel() {
 data class JumpData(
 
 
+<<<<<<< HEAD
     var level : Int = 1,
     var gameOver : Boolean = false,
+=======
+    var level: Int = 1,
+    var gameOver: Boolean = false,
+>>>>>>> 2c5532b (Initial commit)
     var bank: Int = 0,
     var alpha5: Float = 1f,
     var alpha4: MutableList<Float> = mutableListOf(
@@ -257,5 +348,9 @@ data class JumpData(
 
         ),
     var worring: Double = 2.1,
+<<<<<<< HEAD
     )
+=======
+)
+>>>>>>> 2c5532b (Initial commit)
 
