@@ -1,13 +1,5 @@
 package com.example.luckyball.jumperpack.Settings
 
-<<<<<<< HEAD
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
-=======
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -38,30 +30,12 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
->>>>>>> 2c5532b (Initial commit)
 import com.example.luckyball.jumperpack.HelperFunsComp.ImgStatic
 import com.example.luckyball.jumperpack.Rules.NewTopRow
 import com.game.jump.R
 
 @Composable
 fun Settings() {
-<<<<<<< HEAD
-
-    val context = LocalContext.current
-    Box(modifier = Modifier
-        .fillMaxSize()){
-
-        ImgStatic(img = R.drawable.bgg)
-        NewTopRow(modifier = Modifier.align(Alignment.TopCenter))
-
-
-
-
-    }
-
-
-}
-=======
     var selectedDifficulty by remember { mutableStateOf(Difficulty.EASY) }
 
     val context = LocalContext.current
@@ -168,4 +142,3 @@ object Settings {
     var whatIs = "EASY"
 
 }
->>>>>>> 2c5532b (Initial commit)
