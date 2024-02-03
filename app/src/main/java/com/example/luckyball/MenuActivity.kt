@@ -8,6 +8,7 @@ import com.game.jump.databinding.ActivityMenuBinding
 
 
 class MenuActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityMenuBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +21,7 @@ class MenuActivity : AppCompatActivity() {
         binding.startBtn.setOnClickListener {
 
             WhatIsActiv.numberAct = "start"
+
             val inte = Intent(this, JumpActivity::class.java)
             startActivity(inte)
             overridePendingTransition(0, 0)
