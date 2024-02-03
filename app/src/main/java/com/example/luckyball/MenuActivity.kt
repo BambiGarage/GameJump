@@ -21,6 +21,7 @@ class MenuActivity : AppCompatActivity() {
         binding.startBtn.setOnClickListener {
 
             WhatIsActiv.numberAct = "start"
+
             val inte = Intent(this, JumpActivity::class.java)
             startActivity(inte)
             overridePendingTransition(0, 0)
